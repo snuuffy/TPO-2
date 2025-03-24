@@ -45,7 +45,7 @@ public class ClientHandler implements Runnable {
 
                     if (!languageServers.containsKey(targetLang)) {
                         JSONObject error = new JSONObject();
-                        error.put("status", "ERROR_UNSUPPORTED");
+                        error.put("status", "ERROR_LANGUAGE_SEVER_UNAVAILABLE");
                         out.println(error);
                     } else {
                         ServerInfo serverInfo = languageServers.get(targetLang);
